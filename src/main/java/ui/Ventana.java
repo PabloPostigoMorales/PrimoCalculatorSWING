@@ -4,7 +4,6 @@ import primos.PrimeCalculator;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class Ventana extends JFrame {
@@ -13,6 +12,8 @@ public class Ventana extends JFrame {
     private JTextField txtfin;
     private JButton calcularButton;
     private JList lista;
+    private JSpinner spinnerini;
+    private JSpinner spinnerfin;
 
     private DefaultListModel<String> datos;
     public Ventana(){
@@ -24,7 +25,25 @@ public class Ventana extends JFrame {
         //setIconImage();
         datos = new DefaultListModel<>();
         lista.setModel(datos);
-        calcularButton.addActionListener( (ActionEvent e) -> rellenarPrimos());
+        calcularButton.addActionListener( (ActionEvent e) -> rellenarPrimos2());
+
+        spinnerini.setModel(new SpinnerNumberModel(1,1,1000,1));
+        spinnerfin.setModel(new SpinnerNumberModel(3,3,1000,1));
+    }
+
+    private void rellenarPrimos2(){
+        Integer numero1 = (Integer) spinnerini.getValue();
+        Integer numero2 = (Integer) spinnerfin.getValue();
+        if (numero1 >= numero2) {
+            JOptionPane.showMessageDialog(null, "El primer numero no puede ser mayor o igual al segundo");
+        } else {
+            ArrayList<Integer> numeros = PrimeCalculator.inRange(numero1, numero2);
+            if(numeros.isEmpty()) datos.addElement("No hay primos");;
+            datos.clear();
+            for (Integer n:numeros){
+                datos.addElement(n.toString());
+            };
+        }
     }
     private void rellenarPrimos(){
 
