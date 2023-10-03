@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ui.Ventana">
+  <grid id="27dc6" binding="VentanaMain" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="630" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="bd7ee" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="North"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="1ffc5" class="javax.swing.JTextField" binding="txtini">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="303" height="30"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="bc51f" class="javax.swing.JTextField" binding="txtfin">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="1" use-parent-layout="false">
+                <preferred-size width="303" height="30"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="3f40f" class="javax.swing.JButton" binding="calcularButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="ajustes.png"/>
+              <text value="Calcular"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <scrollpane id="4ef78">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="a692c" class="javax.swing.JList" binding="lista">
+            <constraints/>
+            <properties>
+              <model>
+                <item value="1"/>
+                <item value="2"/>
+                <item value="3"/>
+                <item value="4"/>
+                <item value="5"/>
+                <item value="6"/>
+                <item value="5"/>
+              </model>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="a6e19" class="javax.swing.JLabel">
+        <constraints border-constraint="South"/>
+        <properties>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="Hecho con amor para 2º de DAM"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
